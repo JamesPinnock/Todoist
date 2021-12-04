@@ -24,4 +24,20 @@ def custom_():
         if project['query'] == 'p1':
             print("pro")
 
-f
+def get_all_priority(priority=1):
+    ids = []
+
+    # priority 1 == P4
+    # priority 2 == P3
+    # priority 3 == P2
+    # priority 4 == P1 # its really backwards
+
+    for project in api.state['items']:
+        try:
+            if project['priority'] == priority:
+                # print(project)
+                ids.append(project['id'])
+        except:
+            pass
+    # print(ids)
+    return ids
