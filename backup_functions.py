@@ -41,3 +41,15 @@ def get_all_priority(priority=1):
             pass
     # print(ids)
     return ids
+
+# randomly choose item from p4 and give a due date
+def test_date():
+    start_date_today = date.today()
+    end_date = date(2022, 1, 16)
+    print(start_date_today, end_date)
+
+
+def random_date():
+    # in 5 days
+    pass
+
