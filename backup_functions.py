@@ -53,3 +53,21 @@ def random_date():
     # in 5 days
     pass
 
+def important():
+    '''
+    Will update all the item with the labels that are inclued
+    :return:
+    A list of objects based on the list below
+    '''
+    important = [2157095127]
+    ids = []
+    for project in api.state['items']:
+        # print((project['labels']))
+        try:
+            if important[0] in project['labels']:  # and len(project['labels']) == 1:
+                # print(project["labels"])
+                # print(project['content'])
+                ids.append(project['id'])
+        except:
+            pass
+    return ids
