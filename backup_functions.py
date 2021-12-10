@@ -89,3 +89,21 @@ def urgent():
         except:
             pass
     return ids
+
+def important_urgent():
+    '''
+    Will update all the item with the labels that are inclued
+    :return:
+    A list of objects based on the list below ('important_urgent')
+    '''
+    important_urgent = [2157095127, 2157095126]
+    ids = []
+    for project in api.state['items']:
+        # print(project['labels'][:2])
+        try:
+            if project['labels'][:2] == important_urgent:
+                print(project['content'])
+                ids.append(project['id'])
+        except:
+            pass
+    return ids
