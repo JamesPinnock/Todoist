@@ -107,3 +107,11 @@ def important_urgent():
         except:
             pass
     return ids
+
+def update_items_with_label_and_priorty(listing, priority):
+    ''' This will update a list item in place '''
+    labels = [2158964524]
+    for id in listing:
+        item = api.items.get_by_id(id)
+        item.update(priority=priority)
+        api.commit()
