@@ -115,3 +115,27 @@ def update_items_with_label_and_priorty(listing, priority):
         item = api.items.get_by_id(id)
         item.update(priority=priority)
         api.commit()
+
+def update_items_with_due_date(listing):
+    import time
+
+    while True:
+        localtime = time.localtime()
+        # result = time.strftime("%I:%M:%S %p", localtime)
+        ''' This will update a list item in place '''
+        # for id in listing:
+        try:
+            random_task = random.choice(listing)  # random choice from list
+            item = api.items.get_by_id(random_task)
+            number_of_days = random.randint(14, 29)
+            print(number_of_days)
+            if item['due'] == None and localtime == "05:00 PM":
+                item.update(due={'string': f'in {number_of_days} days'})
+                api.commit()
+            else:
+                print("Item has date added")
+        except:
+            pass
+
+# update_items_with_due_date(get_all_priority(3))
+# get_all_priority(3)
