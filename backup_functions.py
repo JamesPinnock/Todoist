@@ -10,7 +10,7 @@ def print_all():
     item = api.items.all()
     print(item)
 
-print_all()
+# print_all()
 
 
 def custom_q():

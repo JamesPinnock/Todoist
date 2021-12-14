@@ -1,1 +1,4 @@
 .idea
+__pycache__/
+api_key.py
+testing.py
