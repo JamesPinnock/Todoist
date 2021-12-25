@@ -20,7 +20,7 @@ The order matters annoyingly
 
 # update_items([5357142685, 5358150795])
 # [5357142685, 5358150795]
-print_all()
+# print_all()
 
 # if label == urgent:
     # then mark with piriorty
