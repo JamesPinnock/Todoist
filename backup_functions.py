@@ -3,7 +3,9 @@ import random
 from datetime import date
 import os
 
-api = todoist.TodoistAPI(os.environ.get('API_PASSWORD'))
+###
+api = todoist.TodoistAPI(os.environ["API_TOKEN"])
+###
 
 # urgent_and_important = [2157095127, 2157095126]
 # important = [2157095127]
@@ -105,7 +107,7 @@ def important_urgent():
         # print(project['labels'][:2])
         try:
             if project['labels'][:2] == important_urgent:
-                print(project['content'])
+                # print(project['content'])
                 ids.append(project['id'])
         except:
             pass
