@@ -1,5 +1,9 @@
-from api_key import api
 from backup_functions import important, important_urgent, update_items_with_label_and_priorty, urgent,print_all, update_items_with_due_date,get_all_priority
+import todoist
+import os
+
+api = todoist.TodoistAPI(os.environ.get('API_PASSWORD'))
+
 api.sync()
 
 ##########
@@ -16,7 +20,7 @@ The order matters annoyingly
 
 # update_items([5357142685, 5358150795])
 # [5357142685, 5358150795]
-# print_all()
+print_all()
 
 # if label == urgent:
     # then mark with piriorty
