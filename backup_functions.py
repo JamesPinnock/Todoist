@@ -1,6 +1,8 @@
-from api_key import api
+import todoist
 import random
 from datetime import date
+
+api = todoist.TodoistAPI(os.environ.get('API_PASSWORD'))
 
 # urgent_and_important = [2157095127, 2157095126]
 # important = [2157095127]
