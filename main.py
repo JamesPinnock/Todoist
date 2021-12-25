@@ -2,8 +2,7 @@ from backup_functions import important, important_urgent, update_items_with_labe
 import todoist
 import os
 
-api = todoist.TodoistAPI(os.environ.get('API_PASSWORD'))
-
+api = todoist.TodoistAPI(os.environ["API_TOKEN"])
 api.sync()
 
 ##########
