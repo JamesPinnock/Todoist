@@ -1,6 +1,7 @@
 import todoist
 import random
 from datetime import date
+import os
 
 api = todoist.TodoistAPI(os.environ.get('API_PASSWORD'))
 
