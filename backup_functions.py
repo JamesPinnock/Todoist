@@ -96,6 +96,7 @@ def urgent():
     return ids
 
 def important_urgent():
+    print("important_urgent")
     '''
     Will update all the item with the labels that are inclued
     :return:
@@ -115,6 +116,7 @@ def important_urgent():
 
 def update_items_with_label_and_priorty(listing, priority):
     ''' This will update a list item in place '''
+    print("update_items_with_label_and_priorty")
     labels = [2158964524]
     for id in listing:
         item = api.items.get_by_id(id)
