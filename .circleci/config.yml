@@ -52,7 +52,7 @@ jobs:
       - run:
           name: Run main
           command: 
-            python main.py
+            ls && python main.py
       
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
