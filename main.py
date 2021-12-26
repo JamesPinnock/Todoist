@@ -12,9 +12,10 @@ api.sync()
 """
 The order matters annoyingly 
 """
-update_items_with_label_and_priorty(urgent(), 2)
-update_items_with_label_and_priorty(important(), 3)
-update_items_with_label_and_priorty(important_urgent(), 4)
+print("main.py running")
+# update_items_with_label_and_priorty(urgent(), 2)
+# update_items_with_label_and_priorty(important(), 3)
+# update_items_with_label_and_priorty(important_urgent(), 4)
 # update_items_with_due_date(get_all_priority())
 
 # update_items([5357142685, 5358150795])
