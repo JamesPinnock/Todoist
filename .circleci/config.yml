@@ -72,4 +72,6 @@ workflows:
                 - main
                 - circleci
     jobs:
-      - run
+      - run:
+          context:
+          - "todoist"
