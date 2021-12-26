@@ -71,3 +71,5 @@ workflows:
               only:
                 - main
                 - circleci
+    jobs:
+      - run
