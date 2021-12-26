@@ -75,3 +75,8 @@ workflows:
       - run:
           context:
           - "todoist"
+          filters:
+            branches:
+              only:
+                - main
+                - circleci
