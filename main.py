@@ -4,6 +4,8 @@ import os
 
 api = todoist.TodoistAPI(os.environ["API_TOKEN"])
 api.sync()
+
+print(api)
 ##########
 # important()
 # important_urgent()
