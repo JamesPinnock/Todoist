@@ -42,7 +42,7 @@ workflows:
   nightly:
     triggers:
       - schedule:
-          cron:  "0,15,30,48 * * * *"
+          cron:  "0,30 * * * *"
           filters:
             branches:
               only:
