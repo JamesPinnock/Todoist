@@ -60,11 +60,7 @@ jobs:
       
 workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
-    jobs:
-      - build-and-test
-      - run:
-          context:
-          - "todoist"
+
 
   nightly:
     triggers:
@@ -74,3 +70,8 @@ workflows:
             branches:
               only:
                 - main
+    jobs:
+      - build-and-test
+      - run:
+          context:
+          - "todoist"
