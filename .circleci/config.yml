@@ -33,6 +33,12 @@ jobs:
       
 workflows:
   version: 2
+  test:
+    jobs:
+      - build-and-test
+      - run:
+          context:
+          - "todoist"
   nightly:
     triggers:
       - schedule:
