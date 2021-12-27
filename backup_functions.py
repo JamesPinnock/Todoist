@@ -120,6 +120,7 @@ def update_items_with_label_and_priorty(listing, priority):
     labels = [2158964524]
     for id in listing:
         item = api.items.get_by_id(id)
+        print(item['date_added'])
         item.update(priority=priority)
         api.commit()
 
