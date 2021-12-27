@@ -66,12 +66,11 @@ workflows:
           context:
           - "todoist"
 
-  # nightly:
-  #   triggers:
-  #     - schedule:
-  #         cron: "0 * * * *"
-  #         filters:
-  #           branches:
-  #             only:
-  #               - main
-  #               - circleci
+  nightly:
+    triggers:
+      - schedule:
+          cron:  "0,15,30,45 * * * *"
+          filters:
+            branches:
+              only:
+                - main
